@@ -25,6 +25,18 @@ session:
     often in the case of some intervention between sessions
     (for example, training).
   format: label
+sample:
+  name: Sample
+  entity: sample
+  description: |
+    A tissue sample, volume or slice pertaining to a subject.
+    The `sample-<label>` key/value is used to distinguish between different
+    samples from a same subject.
+    Samples can be of different sample types such as tissue, primary cell,
+    cell-free sample, etc.
+    The label MUST be unique per subject and is RECOMMENDED to be unique
+    throughout the dataset.
+  format: label
 task:
   name: Task
   entity: task
