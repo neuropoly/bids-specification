@@ -35,7 +35,7 @@ misunderstanding we clarify them here.
 1.  **Sample** - a sample pertaining to a subject such as tissue, primary cell
     or cell-free sample.
     The `sample-<label>` key/value is used to distinguish between different
-    samples from a same subject.
+    samples from the same subject.
     The label MUST be unique per subject and is RECOMMENDED to be unique
     throughout the dataset.
 
