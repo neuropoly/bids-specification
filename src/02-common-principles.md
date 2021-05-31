@@ -32,11 +32,10 @@ misunderstanding we clarify them here.
     context, a session may also indicate a group of related scans,
     taken in one or more visits.
 
-1.  **Sample** - a tissue sample, volume or slice pertaining to a subject.
+1.  **Sample** - a sample pertaining to a subject such as tissue, primary cell
+    or cell-free sample.
     The `sample-<label>` key/value is used to distinguish between different
     samples from a same subject.
-    Samples can be of different sample types such as tissue, primary cell,
-    cell-free sample, etc.
     The label MUST be unique per subject and is RECOMMENDED to be unique
     throughout the dataset.
 
