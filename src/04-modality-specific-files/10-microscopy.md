@@ -118,7 +118,7 @@ fields of view, regardless if they overlap or not.
 
 <!--- Generate following example with MACRO make_filetree_example after community review -->
 For example:
-Three chunks (`chunk-01` to `chunk-03`) from the same brain sample (`sample-01`) of subject `sub-01`.
+Four chunks (`chunk-01` to `chunk-04`) from the same brain sample (`sample-01`) of subject `sub-01`.
 ```Text
 sub-01/
     microscopy/
@@ -128,6 +128,8 @@ sub-01/
         sub-01_sample-01_chunk-02_<modality_suffix>.json
         sub-01_sample-01_chunk-03_<modality_suffix>.<ext>
         sub-01_sample-01_chunk-03_<modality_suffix>.json
+        sub-01_sample-01_chunk-04_<modality_suffix>.<ext>
+        sub-01_sample-01_chunk-04_<modality_suffix>.json
 ```
 In this example, JSON metadata is different for each chunk of `sub-01_sample-01`.
 JSON metadata may be defined per sample or per chunk as appropriate, per the
