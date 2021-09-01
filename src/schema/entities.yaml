@@ -42,9 +42,9 @@ chunk:
   name: Chunk
   entity: chunk
   description: |
-    Chunks refer to multiple regions: 2D images (tiles) or 3D volumes (z-stack)
-    of the same physical sample (ex: the same slice of tissue under the microscope)
-    with different fields of view regardless if they overlap or not.
+    The `chunk-<index>` key/value pair is used to distinguish between different
+    regions, 2D images or 3D volumes files, of the same physical sample with
+    different fields of view acquired in the same imaging experiment.
   type: string
   format: index
 task:
