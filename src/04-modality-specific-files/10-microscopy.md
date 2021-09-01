@@ -231,7 +231,7 @@ after community review. A "manual" table is provided here to facilitate the revi
 | PixelSizeUnits             | REQUIRED              | string              | Unit format of the specified PixelSize. MUST be in micrometers (`"um"`). |
 | Immersion                  | OPTIONAL              | string              | Lens immersion medium. If the file format is OME-TIFF, the value MUST be consistent with the `"Immersion"` OME metadata field. |
 | NumericalAperture          | OPTIONAL              | number              | Lens numerical aperture (for example, `1.4`). If the file format is OME-TIFF, the value MUST be consistent with the `"LensNA"` OME metadata field. |
-| Magnification              | OPTIONAL              | number              | Lens magnification (for example, `60`) If the file format is OME-TIFF, the value MUST be consistent with the `"NominalMagnification"` OME metadata field.|
+| Magnification              | OPTIONAL              | number              | Lens magnification (for example, `40`) If the file format is OME-TIFF, the value MUST be consistent with the `"NominalMagnification"` OME metadata field.|
 | ImageAcquisitionProtocol   | OPTIONAL              | string or URI       | Description of the image acquisition protocol or URI from [protocols.io](https://www.protocols.io/). |
 | OtherAcquisitionParameters | OPTIONAL              | string              | Description of other relevant image acquisition parameters. |
 
@@ -257,7 +257,7 @@ Follow-up with the maintainers to do.
 | SamplePrimaryAntibody       | RECOMMENDED           | string or array of strings | Description of the primary antibody used for immunostaining. Either an [RRID](https://scicrunch.org/resources) or the name, supplier and catalogue number of a commercial antibody. For non-commercial antibodies either an [RRID](https://scicrunch.org/resources) or the host-animal and immunogen used. MAY be an array of strings if different antibodies are used in each channel of the file (for examples: `"Rabbit anti-Human HTR5A Polyclonal Antibody, Invitrogen, Catalog # PA1-2453"` or `"RRID:AB_2122563"`). |
 | SampleSecondaryAntibody     | RECOMMENDED           | string or array of strings | Description of the secondary antibody used for immunostaining. Either an [RRID](https://scicrunch.org/resources) or the name, supplier and catalogue number of a commercial antibody. For non-commercial antibodies either an [RRID](https://scicrunch.org/resources) or the host-animal and immunogen used. MAY be an array of strings if different antibodies are used in each channel of the file (for examples: `"Goat anti-Mouse IgM Secondary Antibody, Invitrogen, Catalog # 31172"` or `"RRID:AB_228322"`). |
 | SliceThickness              | OPTIONAL              | number                     | Slice thickness of the tissue sample in the unit micrometers (`"um"`) (for example: `90`). |
-| ShrinkageFactor             | OPTIONAL              | number                     | Estimated shrinkage factor of the tissue, given in percent (between 0 and 100%) of the original tissue dimensions (for example: `33`). |
+| ShrinkageFactor             | OPTIONAL              | number                     | Estimated shrinkage factor of the tissue, given in percent (between 0 and 100%) of the original tissue dimensions (for example: `3`). |
 | SampleExtractionProtocol    | OPTIONAL              | string or URI              | Description of the sample extraction protocol or URI from [protocols.io](https://www.protocols.io/). |
 | SampleExtractionInstitution | OPTIONAL              | string                     | The name of the institution in charge of the extraction of the sample, if different from the institution in charge of the equipment that produced the image. |
 
@@ -283,24 +283,21 @@ after community review. A "manual" table is provided here to facilitate the revi
 
 
 #### Example (`*_<suffix>.json`)
-<!--- It would be great to match this example to one of the official bids-example-->
+<!--- We have to make sure that those values are "plausible" together -->
 ```JSON
 {
-        "Manufacturer": "Hamamatsu C9600-12",
-        "ManufacturersModelName": "Hamamatsu C9600-12",
-        "DeviceSerialNumber": "000000001",
-        "StationName": "A",
-        "PixelSize": [0.1, 0.2],
+        "Manufacturer": "Hamamatsu",
+        "ManufacturersModelName": "C9600-12",
+        "PixelSize": [0.23, 0.23],
         "PixelSizeUnits": "um",
-        "NumericalAperture": 1.4,
-        "Magnification": 60,
+        "Magnification": 40,
         "BodyPart": "BRAIN",
         "BodyPartDetails": "corpus callosum",
         "Environment": "exvivo",
         "SampleFixation": "4% paraformaldehyde, 2% glutaraldehyde",
         "SampleStaining": "LFB",
         "SliceThickness": 90,
-        "ShrinkageFactor": 33
+        "ShrinkageFactor": 3
 }
 ```
 
