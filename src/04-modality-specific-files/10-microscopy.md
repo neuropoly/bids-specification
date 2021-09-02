@@ -195,7 +195,7 @@ In the case where a multiple resolutions file format is converted to single reso
 only the higher resolution file is present in the raw data.
 Lower resolutions files MUST be placed under the `derivatives` folder and use the
 [`res-<label>`](../99-appendices/09-entities.md#res) entity.
-See [Preprocessed, coregistered and/or resampled volumes](../05-derivatives/03-imaging.md#preprocessed-coregistered-andor-resampled-volumes)
+See [Preprocessed, coregistered and/or resampled volumes](../05-derivatives/03-imaging.md#preprocessed-coregistered-andor-resampled-volumes).
 
 ### Microscopy metadata (Sidecar JSON)
 
