@@ -9,7 +9,7 @@ on how to appropriately credit this extension when referring to it in the
 context of the academic literature.
 
 <!--- TODO: complete examples on bids_examples and add their name in this description-->
-Two [example Microscpy datasets](https://github.com/bids-standard/bids-examples)
+Two [example Microscopy datasets](https://github.com/bids-standard/bids-examples)
 (microscopy_XX and microscopy_YY) have been formatted using this specification and can be
 used for practical guidance when curating a new dataset.
 
