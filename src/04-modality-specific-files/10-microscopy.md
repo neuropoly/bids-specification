@@ -141,13 +141,11 @@ In others cases, the chunks can be different images of the same sample with no e
 spatial relation between them.
 
 Examples of different chunks configurations can be seen in Figure 1.
-<!--- This figure could be prettier, maybe we should also remove rotation and shear
-from example c), it adds nothing but confusion -->
 ![Figure 1](images/microscopy_chunks.png "Examples of Microscopy chunks")
 
-Figure 1: a) Ordered 2D chunks without overlap, b) ordered 2D chunks with overlap,
-c) unordered 2D chunks with and without overlap, d) ordered 2D chunks on different 3D planes,
-e) ordered 3D chunks
+Figure 1: Examples of chunks configurations. a) ordered 2D chunks without overlap,
+b) ordered 2D chunks with overlap, c) unordered 2D chunks with and without overlap,
+d) and e) ordered 2D chunks on different 3D planes, f) ordered 3D chunks
 
 The [`acq-<label>`](../99-appendices/09-entities.md#acq) entity corresponds to a custom label that
 MAY be used to distinguish a different set of parameters used for acquiring the same modality.
