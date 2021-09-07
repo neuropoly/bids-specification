@@ -328,7 +328,7 @@ sub-01 mus musculus C57BL/6J RRID:IMSR_JAX:000664
 sub-02 mus musculus C57BL/6J RRID:IMSR_JAX:000664
 ```
 
-## Photos of the samples (`*_photo.jpg`)
+## Photos of the samples (`*_photo.<extension>`)
 Photos of the tissue sample, overview microscopy scans or blockface images from cutting
 MAY be included for visualization of large samples or to indicate the location of chunks
 in a sample.
@@ -337,8 +337,10 @@ in a sample.
 sub-<label>/
     [ses-<label>/]
         microscopy/
-            sub-<label>[_ses-<label>]_sample-<label>[_acq-<label>]_photo.jpg
+            sub-<label>[_ses-<label>]_sample-<label>[_acq-<label>]_photo.<extension>
 ```
+The file `<extension>` for photos can be either `.jpg`, `.png` or `.tif`.
+
 The [`acq-<label>`](../99-appendices/09-entities.md#acq) entity can be used to indicate
 acquisition of different photos of the same sample.
 <!--- Generate following example with MACRO make_filetree_example after community review -->
