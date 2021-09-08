@@ -3,7 +3,7 @@
 Support for Microscopy was developed as a
 [BIDS Extension Proposal](../07-extensions.md#bids-extension-proposals).
 
-<!--- Time to write a paper and add link to a paper in `src/01-introduction.md#citing-bids`-->
+<!--- TODO: when ready, add the link to the BEP paper in `src/01-introduction.md#citing-bids`-->
 Please see [Citing BIDS](../01-introduction.md#citing-bids)
 on how to appropriately credit this extension when referring to it in the
 context of the academic literature.
@@ -204,8 +204,9 @@ Microscopy data MUST be described by metadata fields, stored in sidecar JSON fil
 The following table will be generated automatically from the `src/schema/metadata` yaml files
 after community review. A "manual" table is provided here to facilitate the review process.
 
-Note: For "StationName", we would like to remove "Corresponds to DICOM Tag 0008, 1010 `Station Name`.".
-It would require changes to `src/schema/metatata/StationName.yaml` and `src/04-modality-specific-files/01-magnetic-resonance-imaging-data.md`.
+Note: For "StationName", we removed "Corresponds to DICOM Tag 0008, 1010 `Station Name`." from the description.
+It will require changes to `src/schema/metatata/StationName.yaml` and
+`src/04-modality-specific-files/01-magnetic-resonance-imaging-data.md`.
 Follow-up with the maintainers to do.
 -->
 | **Key name**              | **Requirement level** | **Data type** | **Description**                                                                                                                                                                        |
@@ -213,7 +214,7 @@ Follow-up with the maintainers to do.
 | Manufacturer              | RECOMMENDED           | string    | Manufacturer of the equipment that produced the measurements. |
 | ManufacturersModelName    | RECOMMENDED           | string    | Manufacturer’s model name of the equipment that produced the measurements. |
 | DeviceSerialNumber        | RECOMMENDED           | string    | The serial number of the equipment that produced the measurements. A pseudonym can also be used to prevent the equipment from being identifiable, so long as each pseudonym is unique within the dataset. |
-| StationName               | RECOMMENDED           | string    | Institution defined name of the machine that produced the measurements. Corresponds to DICOM Tag 0008, 1010 `Station Name`. |
+| StationName               | RECOMMENDED           | string    | Institution defined name of the machine that produced the measurements. |
 | SoftwareVersions          | RECOMMENDED           | string    | Manufacturer’s designation of software version of the equipment that produced the measurements. |
 | InstitutionName           | RECOMMENDED           | string    | The name of the institution in charge of the equipment that produced the measurements. |
 | InstitutionAddress        | RECOMMENDED           | string    | The address of the institution in charge of the equipment that produced the measurements. |
@@ -240,14 +241,17 @@ after community review. A "manual" table is provided here to facilitate the revi
 The following table will be generated automatically from the `src/schema/metadata` yaml files
 after community review. A "manual" table is provided here to facilitate the review process.
 
-Note : For BodyPart, we would like to remove: "Corresponds to DICOM Tag 0018, 0015 `Body Part Examined`. For example: `"BRAIN"`.",
-and replace with "from [DICOM Body Part Examined](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html#chapter_L) (for example: `"BRAIN"`)".
-It would require changes to `src/schema/metatata/BodyPart.yaml` and `src/04-modality-specific-files/09-positron-emission-tomography.md`.
+Note : For BodyPart, we removed: "Corresponds to DICOM Tag 0018, 0015 `Body Part Examined`.
+For example: `"BRAIN"`." from the description, and replace with "from [DICOM Body Part Examined]
+(http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html#chapter_L)
+(for example: `"BRAIN".`)".
+It will require changes to `src/schema/metatata/BodyPart.yaml` and
+`src/04-modality-specific-files/09-positron-emission-tomography.md`.
 Follow-up with the maintainers to do.
 -->
 | **Key name**                | **Requirement level** | **Data type** | **Description**                                                                                                                                                                        |
 | --------------------------- | --------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BodyPart                    | RECOMMENDED           | string                     | Body part of the organ / body region scanned. Corresponds to DICOM Tag 0018, 0015 `Body Part Examined`. For example: `"BRAIN"`. |
+| BodyPart                    | RECOMMENDED           | string                     | Body part of the organ / body region scanned. from [DICOM Body Part Examined](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html#chapter_L) (for example: `"BRAIN"`)". |
 | BodyPartDetails             | OPTIONAL              | string                     | If needed, additional details about body part or location (for example: `"corpus callosum"`). |
 | BodyPartDetailsOntology     | OPTIONAL              | string                     | If applicable, information about the ontology used for specifying BodyPartDetails (for example: `"UBERON (https://www.ebi.ac.uk/ols/ontologies/uberon)"`). |
 | Environment                 | RECOMMENDED           | string                     | RECOMMENDED. Indicate if the sample is imaged `"invivo"`, `"exvivo"` or `"invitro"`. |
