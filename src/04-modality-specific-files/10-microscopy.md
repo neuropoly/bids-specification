@@ -349,11 +349,11 @@ sub-01/
         sub-01_sample-01_acq-1_photo.jpg
         sub-01_sample-01_acq-2_photo.jpg
 ```
-<!--- It would be great to have an example here -->
-Example of an overview scan from...
+Below is an example of a spinal cord SEM overview, from Zaimi et al., 2018.
+[doi:10.1038/s41598-018-22181-4](https://doi.org/10.1038/s41598-018-22181-4).
 ```Text
-    <filename>_photo.jpg
+    sub-01_sample-01_photo.jpg
 ```
-![image title](images/<link-to-image> "title text")
+![SEM overview](images/microscopy_sem_overview.jpg "SEM overview")
 
 <!-- Link Definitions -->
