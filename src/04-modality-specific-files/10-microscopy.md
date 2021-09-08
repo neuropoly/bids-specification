@@ -260,7 +260,7 @@ Follow-up with the maintainers to do.
 | SampleStaining              | RECOMMENDED           | string or array of strings | Description of the tissue sample staining (for example: `"Osmium"`). MAY be an array of strings if different stains are used in each channel of the file (for example: `["LFB", "PLP"]`). |
 | SamplePrimaryAntibody       | RECOMMENDED           | string or array of strings | Description of the primary antibody used for immunostaining. Either an [RRID](https://scicrunch.org/resources) or the name, supplier and catalogue number of a commercial antibody. For non-commercial antibodies either an [RRID](https://scicrunch.org/resources) or the host-animal and immunogen used (for examples: `"RRID:AB_2122563"` or `"Rabbit anti-Human HTR5A Polyclonal Antibody, Invitrogen, Catalog # PA1-2453"`). MAY be an array of strings if different antibodies are used in each channel of the file. |
 | SampleSecondaryAntibody     | RECOMMENDED           | string or array of strings | Description of the secondary antibody used for immunostaining. Either an [RRID](https://scicrunch.org/resources) or the name, supplier and catalogue number of a commercial antibody. For non-commercial antibodies either an [RRID](https://scicrunch.org/resources) or the host-animal and immunogen used (for examples: `"RRID:AB_228322"` or `"Goat anti-Mouse IgM Secondary Antibody, Invitrogen, Catalog # 31172"`). MAY be an array of strings if different antibodies are used in each channel of the file. |
-| SliceThickness              | OPTIONAL              | number                     | Slice thickness of the tissue sample in the unit micrometers (`"um"`) (for example: `90`). |
+| SliceThickness              | OPTIONAL              | number                     | Slice thickness of the tissue sample in the unit micrometers (`"um"`) (for example: `5`). |
 | ShrinkageFactor             | OPTIONAL              | number                     | Estimated shrinkage factor of the tissue, given in percent (between 0 and 100%) of the original tissue dimensions (for example: `3`). |
 | SampleExtractionProtocol    | OPTIONAL              | string or URI              | Description of the sample extraction protocol or URI from [protocols.io](https://www.protocols.io/). |
 | SampleExtractionInstitution | OPTIONAL              | string                     | The name of the institution in charge of the extraction of the sample, if different from the institution in charge of the equipment that produced the image. |
@@ -300,7 +300,7 @@ after community review. A "manual" table is provided here to facilitate the revi
         "Environment": "exvivo",
         "SampleFixation": "4% paraformaldehyde, 2% glutaraldehyde",
         "SampleStaining": "LFB",
-        "SliceThickness": 90,
+        "SliceThickness": 5,
         "ShrinkageFactor": 3
 }
 ```
