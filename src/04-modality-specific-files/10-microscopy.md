@@ -353,7 +353,7 @@ sub-01/
         sub-01_sample-01_acq-1_photo.jpg
         sub-01_sample-01_acq-2_photo.jpg
 ```
-Below is an example of a spinal cord SEM overview, from Zaimi et al., 2018.
+Below is an example of a spinal cord SEM overview, modified from Zaimi et al., 2018.
 [doi:10.1038/s41598-018-22181-4](https://doi.org/10.1038/s41598-018-22181-4).
 ```Text
     sub-01_sample-01_photo.jpg
