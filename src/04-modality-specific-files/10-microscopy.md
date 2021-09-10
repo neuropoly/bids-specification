@@ -8,14 +8,16 @@ Please see [Citing BIDS](../01-introduction.md#citing-bids)
 on how to appropriately credit this extension when referring to it in the
 context of the academic literature.
 
-<!--- TODO: complete examples on bids_examples and add their name in this description-->
-Two [example Microscopy datasets](https://github.com/bids-standard/bids-examples)
-(microscopy_XX and microscopy_YY) have been formatted using this specification and can be
-used for practical guidance when curating a new dataset.
+<!--- TODO: link to the branch with the examples -->
+Microscopy datasets formatted using this specification are available on the
+[BIDS examples repository](https://github.com/bids-standard/bids-examples)
+(`microscopy_SEM001` and `microscopy_SPIM001`) and can be used for practical
+guidance when curating a new dataset.
 
-<!--- TODO: update SEM dataset and add the link.
-It would be great to have an OMETIFF real example dataset as well. -->
-Further Microscopy datasets are available from [somewhere](<link_to_somewhere>).
+Further Microscopy datasets are available:
+<!--- TODO: Add link to OME-TIFF dataset -->
+-   In PNG format:  [`data_axondeepseg_sem`](https://doi.org/10.5281/zenodo.5498378)
+-   In OME-TIFF format: [link to the dataset - pending]
 
 ## Microscopy recording data
 <!---
