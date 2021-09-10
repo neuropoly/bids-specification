@@ -99,7 +99,8 @@ The [`sample-<label>`](../99-appendices/09-entities.md#sample) entity is REQUIRE
 Microscopy data and is used to distinguish between different samples from the same subject.
 The label MUST be unique per subject and is RECOMMENDED to be unique throughout the dataset.
 
-<!--- Generate following example with MACRO make_filetree_example after community review -->
+<!---The following example will be generated with MACRO `make_filetree_example` after
+community review. -->
 For example:
 Three brain slices (`sample-01` to `sample-03`) extracted from subject `sub-01`.
 ```Text
@@ -118,7 +119,8 @@ The [`chunk-<index>`](../99-appendices/09-entities.md#chunk) entity is used when
 regions (2D images or 3D volumes files) of the same physical sample are imaged with different
 fields of view, regardless if they overlap or not.
 
-<!--- Generate following example with MACRO make_filetree_example after community review -->
+<!--- The following example will be generated with MACRO `make_filetree_example` after
+community review. -->
 For example:
 Four chunks (`chunk-01` to `chunk-04`) from the same brain sample (`sample-01`) of subject `sub-01`.
 ```Text
@@ -160,7 +162,8 @@ label as long as they are consistent across subjects and sessions.
 The [`stain-<label>`](../99-appendices/09-entities.md#stain) entity can be used to distinguish
 image files from the same sample using different stains or antibodies for contrast enhancement.
 
-<!--- Generate following example with MACRO make_filetree_example after community review -->
+<!--- The following example will be generated with MACRO `make_filetree_example` after
+community review. -->
 For example:
 Brain slice (`sample-01`) extracted from subject `sub-01`, imaged with three stains
 (`stain-01`, `stain-02`, `stain-03`) in three separate files.
@@ -206,10 +209,9 @@ Microscopy data MUST be described by metadata fields, stored in sidecar JSON fil
 The following table will be generated automatically from the `src/schema/metadata` yaml files
 after community review. A "manual" table is provided here to facilitate the review process.
 
-Note: For "StationName", we removed "Corresponds to DICOM Tag 0008, 1010 `Station Name`." from the description.
-It will require changes to `src/schema/metatata/StationName.yaml` and
+Note: For "StationName", we removed "Corresponds to DICOM Tag 0008, 1010 `Station Name`."
+from the description. It will require changes to `src/schema/metatata/StationName.yaml` and
 `src/04-modality-specific-files/01-magnetic-resonance-imaging-data.md`.
-Follow-up with the maintainers to do.
 -->
 | **Key name**              | **Requirement level** | **Data type** | **Description**                                                                                                                                                                        |
 | ------------------------- | --------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -249,7 +251,6 @@ For example: `"BRAIN"`." from the description, and replace with "from [DICOM Bod
 (for example: `"BRAIN".`)".
 It will require changes to `src/schema/metatata/BodyPart.yaml` and
 `src/04-modality-specific-files/09-positron-emission-tomography.md`.
-Follow-up with the maintainers to do.
 -->
 | **Key name**                | **Requirement level** | **Data type** | **Description**                                                                                                                                                                        |
 | --------------------------- | --------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -287,9 +288,7 @@ after community review. A "manual" table is provided here to facilitate the revi
 | ChunkTransformationMatrix     | OPTIONAL                                                         | array of arrays of numbers | 3x3 or 4x4 matrix describing spatial chunk transformation, for 2D and 3D respectively (for examples: `[[2, 0, 0], [0, 3, 0], [0, 0, 1]]` in 2D for 2x and 3x scaling along the first and second axis respectively or `[[1, 0, 0, 0], [0, 2, 0, 0], [0, 0, 3, 0], [0, 0, 0, 1]]` in 3D for 2x and 3x scaling along the second and third axis respectively). Note that non-spatial dimensions like time and channel are not included in the transformation matrix. |
 | ChunkTransformationMatrixAxis | OPTIONAL, but REQUIRED if `ChunkTransformationMatrix` is present | arrays of strings          | Describe the axis of the ChunkTransformationMatrix (for examples: `['X', 'Y']` or `['Z', 'Y', 'X']`) |
 
-
 #### Example (`*_<suffix>.json`)
-<!--- We have to make sure that those values are "plausible" together -->
 ```JSON
 {
         "Manufacturer": "Hamamatsu",
@@ -336,7 +335,8 @@ sub-02 mus musculus C57BL/6J RRID:IMSR_JAX:000664
 Photos of the tissue sample, overview microscopy scans or blockface images from cutting
 MAY be included for visualization of large samples or to indicate the location of chunks
 in a sample.
-<!--- Generate following example with MACRO make_filetree_example after community review -->
+<!---The following example will be generated with MACRO `make_filetree_example` after
+community review. -->
 ```Text
 sub-<label>/
     [ses-<label>/]
@@ -347,7 +347,8 @@ The file `<extension>` for photos can be either `.jpg`, `.png` or `.tif`.
 
 The [`acq-<label>`](../99-appendices/09-entities.md#acq) entity can be used to indicate
 acquisition of different photos of the same sample.
-<!--- Generate following example with MACRO make_filetree_example after community review -->
+<!---The following example will be generated with MACRO `make_filetree_example` after
+community review. -->
 For example:
 ```Text
 sub-01/
